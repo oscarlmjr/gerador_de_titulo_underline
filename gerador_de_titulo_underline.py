@@ -1,16 +1,23 @@
 import unidecode
 import pyperclip
+import os
+import sys
 
 # import pandas as pd
 # import win32com.client as win32
 
 # import unicodedata
-# import os
 
 
 def criar_string(stringb='', nova_string=''):
 
     stringb = input('Digite uma string: ')
+
+    if stringb == 'clear':
+        print("\n" * os.get_terminal_size().lines)
+
+    if stringb == 'exit':
+        sys.exit('\nO sistema está sendo finalizado.\n')
 
     for n in stringb:
         if n.isalpha() or n.isdigit():
