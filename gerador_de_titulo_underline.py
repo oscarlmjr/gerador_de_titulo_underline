@@ -14,7 +14,8 @@ def criar_string(stringb='', nova_string=''):
     stringb = input('Digite uma string: ')
 
     if stringb == 'clear':
-        print("\n" * os.get_terminal_size().lines)
+        # print("\n" * os.get_terminal_size().lines)
+        os.system('cls')
 
     if stringb == 'exit':
         sys.exit('\nO sistema está sendo finalizado.\n')
